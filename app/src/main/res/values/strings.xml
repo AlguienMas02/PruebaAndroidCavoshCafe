@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">apkCavoshCafe</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="splash">Splash</string>
+    <string name="inicio">Home</string>
+    <string name="menu">Menu</string>
+    <string name="favoritos">Favorites</string>
+    <string name="perfil">Profile</string>
+    <string name="carrito">Cart</string>
+</resources>

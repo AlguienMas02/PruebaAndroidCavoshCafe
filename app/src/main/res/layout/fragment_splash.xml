@@ -3,11 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:background="@color/Police_blue"
+    tools:background="@color/police_blue"
     tools:context=".ui.Splash">
 
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/btnEmpezar"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginHorizontal="100dp"
+        android:background="@color/gunmetal"
+        android:text="@string/empezar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+
         />
 </FrameLayout>

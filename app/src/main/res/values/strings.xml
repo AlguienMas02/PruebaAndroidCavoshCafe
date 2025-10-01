@@ -8,4 +8,11 @@
     <string name="favoritos">Favorites</string>
     <string name="perfil">Profile</string>
     <string name="carrito">Cart</string>
+    <string name="empezar">Empezar</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="correo">Correo</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="olvido">¿Olvidate tu contraseña?</string>
+    <string name="ingresar">Ingresar</string>
 </resources>

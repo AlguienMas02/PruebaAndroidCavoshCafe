@@ -131,32 +131,85 @@
             android:textSize="18sp"
             android:textStyle="bold"/>
 
-        <!--<EditText
-            android:id="@+id/edtCorreo"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:background="@drawable/se_bg_edt_police_blue"
-            android:inputType="textEmailAddress"
-            android:textColorHint="@color/steel_teal"
-            android:autofillHints=""
-            android:hint="@string/correo"
-            android:paddingHorizontal="16dp"/>
+            android:orientation="horizontal">
 
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/carmine_pink" />
 
-        <EditText
-            android:id="@+id/edtPassword"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Or login with"
+                android:textColor="@color/police_blue"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:background="@color/carmine_pink" />
+        </FrameLayout>
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/se_bg_edt_police_blue"
-            android:inputType="textPassword"
-            android:textColorHint="@color/steel_teal"
-            android:autofillHints=""
-            android:hint="@string/contrase_a"
-            android:paddingHorizontal="16dp"
-            android:drawableEnd="@drawable/se_bg_edt_password"
-            /> -->
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
 
+            <ImageView
+                android:layout_width="108dp"
+                android:layout_height="84dp"
+                android:background="@drawable/sh_bg_btn_flesh"
+                android:contentDescription="contentDescription"
+                android:padding="20dp"
+                android:src="@drawable/ic_facebook" />
+            <ImageView
+                android:layout_width="108dp"
+                android:layout_height="84dp"
+                android:layout_gravity="center"
+                android:background="@drawable/sh_bg_btn_flesh"
+                android:contentDescription="contentDescription"
+                android:padding="10dp"
+                android:src="@drawable/ic_google_plus" />
+
+            <ImageView
+                android:layout_width="108dp"
+                android:layout_height="84dp"
+                android:layout_gravity="end"
+                android:background="@drawable/sh_bg_btn_flesh"
+                android:contentDescription="contentDescription"
+                android:padding="16dp"
+                android:src="@drawable/ic_apple" />
+        </FrameLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="90dp"
+        android:layout_marginBottom="30dp"
+        android:text="You have an account?"
+        android:textColor="@color/police_blue"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="30dp"
+        android:text="Log in"
+        android:textColor="@color/carmine_pink"
+        android:textStyle="bold" />
 </FrameLayout>

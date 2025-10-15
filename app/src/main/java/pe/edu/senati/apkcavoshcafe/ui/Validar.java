@@ -14,10 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import pe.edu.senati.apkcavoshcafe.R;
-import pe.edu.senati.apkcavoshcafe.databinding.FragmentMenuBinding;
 import pe.edu.senati.apkcavoshcafe.databinding.FragmentVerificarBinding;
 
-public class Verificar extends Fragment {
+public class Validar extends Fragment {
 
     FragmentVerificarBinding binding;
     Context context;
@@ -42,5 +41,20 @@ public class Verificar extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         context = getContext();
         navController = Navigation.findNavController(view);
+
+        binding.btnVerificar.setOnClickListener(v -> btnVerificar_Click());
     }
+
+    private void btnVerificar_Click() {
+        String sValidar =getArguments().getString("validar");
+        String sCodigo = getArguments().getString("correo");
+        String sCorreo = binding.tilCodigo.getEditText().getText().toString().trim();
+
+        if (sValidar.equals("password"))
+            navController.navigate(R.id.navigation_password);
+        else if(sValidar.equals("registrar")){
+
+        }
+    }
+
 }

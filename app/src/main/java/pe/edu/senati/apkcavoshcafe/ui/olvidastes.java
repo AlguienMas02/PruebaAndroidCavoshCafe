@@ -15,9 +15,10 @@ import android.view.ViewGroup;
 
 import pe.edu.senati.apkcavoshcafe.R;
 import pe.edu.senati.apkcavoshcafe.databinding.FragmentLoginBinding;
+import pe.edu.senati.apkcavoshcafe.databinding.FragmentOlvidasteBinding;
 
-public class Login extends Fragment {
-    FragmentLoginBinding binding;
+public class olvidastes extends Fragment {
+    FragmentOlvidasteBinding binding;
     Context context;
     View view;
     NavController navController;
@@ -30,7 +31,7 @@ public class Login extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentLoginBinding.inflate(inflater, container, false);
+        binding = FragmentOlvidasteBinding.inflate(inflater, container, false);
         return view = binding.getRoot();
 
     }
@@ -41,14 +42,16 @@ public class Login extends Fragment {
         context = getContext();
         navController = Navigation.findNavController( view );
 
-        binding.tvOlvidastes.setOnClickListener(v -> navController.navigate(R.id.navigation_olvidastes));
-        binding.tvRegistrar.setOnClickListener(v -> navController.navigate(R.id.navigation_registrar));
-        binding.tvOlvidastes.setOnClickListener(v -> navController.navigate(R.id.navigation_olvidastes));
-        binding.btnLogin.setOnClickListener(v -> btnLogin_Click() );
-
-
+        binding.btnEnviar.setOnClickListener( v -> btnEnviar() );
     }
-    void btnLogin_Click() {
-
+    private void btnEnviar(){
+        //chapa ciorreo
+        String sCorreo = binding.tilCorreo.getEditText().getText().toString();
+        //validación
+        //api -> generar el codigo, guardar código, enviar correo
+        Bundle bundle = new Bundle(); // traspaso
+        bundle.putString("validar", "password");
+        bundle.putString("correo", sCorreo);
+        navController.navigate(R.id.navigation_verificar, bundle); // envia
     }
 }

@@ -107,6 +107,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
+            android:id="@+id/tvOlvidastes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -201,7 +202,7 @@
         android:textColor="@color/police_blue"
         android:textStyle="bold" />
     <TextView
-        android:id="@+id/tv_register"
+        android:id="@+id/tvRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"

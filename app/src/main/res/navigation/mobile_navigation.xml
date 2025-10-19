@@ -32,10 +32,10 @@
         tools:layout="@layout/fragment_registrar" >
         <action
             android:id="@+id/action_navigation_registrar_to_navigation_verificar"
-            app:destination="@id/navigation_verificar" />
+            app:destination="@id/navigation_validar" />
     </fragment>
     <fragment
-        android:id="@+id/navigation_verificar"
+        android:id="@+id/navigation_validar"
         android:name="pe.edu.senati.apkcavoshcafe.ui.Validar"
         android:label="fragment_verificar"
         tools:layout="@layout/fragment_validar" />

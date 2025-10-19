@@ -1,51 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Login">
+    tools:context=".ui.Registrar">
 
-    <!-- TODO: Update blank fragment layout -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="@drawable/sh_bg_header_police_blue">
+        android:background="@drawable/sh_bg_header_police_blue" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
             android:layout_marginStart="20dp"
-            android:text="Let's get you signed in!"
+            android:text="Let's get you registered!"
             android:textColor="@color/flesh"
             android:textSize="20sp"
             android:textStyle="bold" />
 
     </FrameLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="100dp"
-        android:orientation="vertical">
+        android:layout_marginTop="92dp"
+        android:orientation="vertical" >
 
         <LinearLayout
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnIngresar"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/sh_bg_btn_bright_gray"
-                android:text="@string/login"
+                android:text="@string/ingresar"
                 android:textAllCaps="false"
                 android:textColor="@color/gunmetal"
                 android:textSize="16sp"
@@ -54,61 +52,64 @@
             <Button
                 android:id="@+id/btnRegistrar"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="180dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="-36dp"
                 android:background="@drawable/sh_bg_btn_carmine_pink"
-                android:text="@string/register"
+                android:text="@string/registrar"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:translationZ="5dp"/>
+
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilNombre"
+            android:id="@+id/tilNombres"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            app:hintEnabled="false">
+            app:endIconMode="clear_text"
+            app:hintEnabled="false" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/se_bg_edt_police_blue"
-                android:hint="@string/nombre"
                 android:inputType="textPersonName"
-                android:maxLength="35"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="12dp"
-                android:textColorHint="@color/steel_teal" />
+                android:textColorHint="@color/steel_teal"
+                android:hint="Nombres" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:hintEnabled="false">
+            android:layout_marginTop="12dp"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/se_bg_edt_police_blue"
-                android:hint="@string/correo"
                 android:inputType="textEmailAddress"
-                android:maxLength="40"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="12dp"
-                android:textColorHint="@color/steel_teal" />
+                android:textColorHint="@color/steel_teal"
+                android:hint="@string/correo" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilPassword"
+            android:id="@+id/tilPasswordd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="12dp"
             app:endIconMode="password_toggle"
             app:hintEnabled="false">
 
@@ -116,18 +117,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/se_bg_edt_police_blue"
-                android:hint="@string/contrase_a"
                 android:inputType="textPassword"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="12dp"
-                android:textColorHint="@color/steel_teal" />
+                android:textColorHint="@color/steel_teal"
+                android:hint="@string/passwordd" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/confirmPassword"
+            android:id="@+id/tilPassworddConfirmar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="12dp"
             app:endIconMode="password_toggle"
             app:hintEnabled="false">
 
@@ -135,14 +137,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/se_bg_edt_police_blue"
-                android:hint="@string/corfirmar_contrasena"
                 android:inputType="textPassword"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="12dp"
-                android:textColorHint="@color/steel_teal" />
+                android:textColorHint="@color/steel_teal"
+                android:hint="@string/confirmar_passwordd" />
+
         </com.google.android.material.textfield.TextInputLayout>
-
-
 
         <Button
             android:id="@+id/btnGuardar"
@@ -151,7 +152,7 @@
             android:layout_gravity="bottom|center"
             android:layout_marginTop="30dp"
             android:background="@drawable/sh_bg_btn_gunmetal"
-            android:text="@string/register"
+            android:text="@string/guardar"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp"
@@ -164,25 +165,26 @@
             android:orientation="horizontal">
 
             <View
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/carmine_pink" />
+                android:background="@color/carmine_pink"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/or_login_with"
+                android:text="Registrar con"
                 android:textColor="@color/police_blue"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <View
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="1dp"
-                android:layout_gravity="end"
                 android:layout_marginTop="10dp"
-                android:background="@color/carmine_pink" />
+                android:layout_gravity="end"
+                android:background="@color/carmine_pink"/>
+
         </FrameLayout>
 
         <FrameLayout
@@ -191,30 +193,33 @@
             android:layout_marginTop="30dp">
 
             <ImageView
+                android:id="@+id/ivFacebook"
                 android:layout_width="108dp"
-                android:layout_height="84dp"
+                android:layout_height="72dp"
                 android:background="@drawable/sh_bg_btn_flesh"
-                android:contentDescription="contentDescription"
-                android:padding="20dp"
-                android:src="@drawable/ic_facebook" />
+                android:contentDescription="@string/content_description"
+                android:padding="16dp"
+                android:src="@drawable/ic_facebook"/>
 
             <ImageView
+                android:id="@+id/ivGoogle"
                 android:layout_width="108dp"
-                android:layout_height="84dp"
+                android:layout_height="72dp"
                 android:layout_gravity="center"
                 android:background="@drawable/sh_bg_btn_flesh"
-                android:contentDescription="contentDescription"
-                android:padding="10dp"
-                android:src="@drawable/ic_google_plus" />
+                android:contentDescription="@string/content_description"
+                android:padding="16dp"
+                android:src="@drawable/ic_google_plus"/>
 
             <ImageView
+                android:id="@+id/ivApple"
                 android:layout_width="108dp"
-                android:layout_height="84dp"
+                android:layout_height="72dp"
                 android:layout_gravity="end"
                 android:background="@drawable/sh_bg_btn_flesh"
-                android:contentDescription="contentDescription"
+                android:contentDescription="@string/content_description"
                 android:padding="16dp"
-                android:src="@drawable/ic_apple" />
+                android:src="@drawable/ic_apple"/>
 
         </FrameLayout>
 
@@ -224,22 +229,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginStart="70dp"
-        android:layout_marginBottom="30dp"
-        android:text="Don't you have account?"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="20dp"
+        android:text="¿ Si estas registrado ?"
         android:textColor="@color/police_blue"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
+
     <TextView
-        android:id="@+id/tv_register"
+        android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="20dp"
         android:clickable="true"
         android:focusable="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginBottom="30dp"
-        android:text="Register now"
+        android:text="Inicia Sesión"
         android:textColor="@color/carmine_pink"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
 </FrameLayout>

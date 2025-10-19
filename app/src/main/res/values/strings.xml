@@ -1,21 +1,25 @@
 <resources>
+    <string name="app_name">apkCavoshCafeS101</string>
+    <string name="inicio">Inicio</string>
 
-    <string name="app_name">apkCavoshCafe</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="splash">Splash</string>
-    <string name="inicio">Home</string>
-    <string name="menu">Menu</string>
-    <string name="favoritos">Favorites</string>
-    <string name="perfil">Profile</string>
-    <string name="carrito">Cart</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="menu">Menú</string>
+    <string name="perfil">Perfil</string>
+    <string name="carrito">Carrito</string>
     <string name="empezar">Empezar</string>
-    <string name="login">Login</string>
-    <string name="register">Register</string>
-    <string name="correo">Correo</string>
-    <string name="contrase_a">Contraseña</string>
-    <string name="olvido">¿Olvidate tu contraseña?</string>
+    <string name="login_header">Let\'s get you signed in!</string>
     <string name="ingresar">Ingresar</string>
-    <string name="corfirmar_contrasena">Corfirmar Contraseña</string>
-    <string name="or_login_with">Or login with</string>
-    <string name="nombre">Nombre</string>
+    <string name="registrar">Registrar</string>
+    <string name="correo">Correo</string>
+    <string name="passwordd">Contraseña</string>
+    <string name="olvidastes_passwordd">¿ Olvidastes tu contraseña ?</string>
+    <string name="content_description">contentDescription</string>
+    <string name="ingresar_con">Ingresar con</string>
+    <string name="login">Login</string>
+    <string name="confirmar_passwordd">Confirmar contraseña</string>
+    <string name="verificar">Verificar</string>
+    <string name="guardar">Guardar</string>
+
 </resources>

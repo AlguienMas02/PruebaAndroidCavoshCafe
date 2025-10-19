@@ -14,7 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import pe.edu.senati.apkcavoshcafe.R;
-import pe.edu.senati.apkcavoshcafe.databinding.FragmentLoginBinding;
 import pe.edu.senati.apkcavoshcafe.databinding.FragmentOlvidasteBinding;
 
 public class olvidastes extends Fragment {
@@ -52,6 +51,6 @@ public class olvidastes extends Fragment {
         Bundle bundle = new Bundle(); // traspaso
         bundle.putString("validar", "password");
         bundle.putString("correo", sCorreo);
-        navController.navigate(R.id.navigation_verificar, bundle); // envia
+        navController.navigate(R.id.navigation_validar, bundle); // envia
     }
 }

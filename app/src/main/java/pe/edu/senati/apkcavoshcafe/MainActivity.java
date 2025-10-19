@@ -1,13 +1,13 @@
 package pe.edu.senati.apkcavoshcafe;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import pe.edu.senati.apkcavoshcafe.databinding.ActivityMainBinding;
@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
         navController.addOnDestinationChangedListener((navController1, navDestination, bundle) -> {
             int id = navDestination.getId();
-            if(id == R.id.navigation_splash || id == R.id.navigation_login ||
-                    id == R.id.navigation_registrar || id == R.id.navigation_verificar ||
-                    id == R.id.navigation_menuProducto || id == R.id.navigation_menuProductoPersonalizar)
-                navView.setVisibility(BottomNavigationView.INVISIBLE);
+            if ( id == R.id.navigation_splash || id == R.id.navigation_login ||
+                    id == R.id.navigation_registrar || id == R.id.navigation_validar ||
+                    id == R.id.navigation_menuProducto || id == R.id.navigation_menuProductoPersonalizar )
+                navView.setVisibility( View.INVISIBLE );
         });
     }
 

@@ -14,11 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import pe.edu.senati.apkcavoshcafe.R;
-import pe.edu.senati.apkcavoshcafe.databinding.FragmentVerificarBinding;
+import pe.edu.senati.apkcavoshcafe.databinding.FragmentValidarBinding;
 
 public class Validar extends Fragment {
-
-    FragmentVerificarBinding binding;
+    FragmentValidarBinding binding;
     Context context;
     View view;
     NavController navController;
@@ -27,12 +26,11 @@ public class Validar extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
-
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentVerificarBinding.inflate(inflater, container, false);
+        binding = FragmentValidarBinding.inflate(inflater,container,false);
         return view = binding.getRoot();
     }
 
@@ -40,20 +38,26 @@ public class Validar extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         context = getContext();
-        navController = Navigation.findNavController(view);
+        navController = Navigation.findNavController( view );
 
-        binding.btnVerificar.setOnClickListener(v -> btnVerificar_Click());
+        binding.btnVerificar.setOnClickListener(v -> btnValidar_Click() );
     }
 
-    private void btnVerificar_Click() {
-        String sValidar =getArguments().getString("validar");
-        String sCodigo = getArguments().getString("correo");
-        String sCorreo = binding.tilCodigo.getEditText().getText().toString().trim();
+    private void btnValidar_Click() {
+        String sValidar = getArguments().getString("validar");
+        String sCorreo = getArguments().getString("correo");
+        String sCodigo = binding.tilCodigo.getEditText().getText().toString().trim();
 
-        if (sValidar.equals("password"))
-            navController.navigate(R.id.navigation_password);
-        else if(sValidar.equals("registrar")){
+        // api -> validar el código para el correo y "validar"
 
+        if ( sValidar.equals("passwordd") ) {
+            Bundle bundle = new Bundle();
+            bundle.putString("correo", sCorreo);
+            navController.navigate( R.id.navigation_password, bundle );
+        }
+        else if ( sValidar.equals("registrar") ) {
+            // registrar usuario en bd local
+            navController.navigate( R.id.navigation_inicio  );
         }
     }
 

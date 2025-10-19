@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.Login">
 
-    <!-- TODO: Update blank fragment layout -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="@drawable/sh_bg_header_police_blue">
+        android:background="@drawable/sh_bg_header_police_blue" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
             android:layout_marginStart="20dp"
-            android:text="Let's get you signed in!"
+            android:text="@string/login_header"
             android:textColor="@color/flesh"
             android:textSize="20sp"
             android:textStyle="bold" />
 
     </FrameLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="100dp"
         android:orientation="vertical" >
@@ -36,33 +35,34 @@
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btnIngresar"
                 style="?android:attr/buttonBarButtonStyle"
-                android:id="@+id/btnLogin"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/sh_bg_btn_carmine_pink"
-                android:text="@string/login"
+                android:text="@string/ingresar"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:translationZ="5dp" />
+                android:translationZ="5dp"/>
+
             <Button
+                android:id="@+id/btnRegistrar"
                 style="?android:attr/buttonBarButtonStyle"
-                android:id="@+id/btnRegistar"
-                android:layout_width="180dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="-36dp"
                 android:background="@drawable/sh_bg_btn_bright_gray"
-                android:text="@string/register"
+                android:text="@string/registrar"
                 android:textAllCaps="false"
                 android:textColor="@color/gunmetal"
                 android:textSize="16sp"
                 android:textStyle="bold" />
+
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -70,24 +70,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            app:hintEnabled="false">
+            app:hintEnabled="false" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/correo"
-                android:inputType="textEmailAddress"
-                android:textColorHint="@color/steel_teal"
                 android:background="@drawable/se_bg_edt_police_blue"
-                android:maxLength="35"
-                android:paddingVertical="12dp"
+                android:inputType="textEmailAddress"
                 android:paddingHorizontal="16dp"
-                />
+                android:paddingVertical="12dp"
+                android:textColorHint="@color/steel_teal"
+                android:hint="@string/correo" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilPassword"
+            android:id="@+id/tilPasswordd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -97,13 +95,13 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/contrase_a"
-                android:inputType="textPassword"
-                android:textColorHint="@color/steel_teal"
                 android:background="@drawable/se_bg_edt_police_blue"
-                android:paddingVertical="12dp"
+                android:inputType="textPassword"
                 android:paddingHorizontal="16dp"
-                />
+                android:paddingVertical="12dp"
+                android:textColorHint="@color/steel_teal"
+                android:hint="@string/passwordd" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -114,23 +112,23 @@
             android:layout_gravity="end"
             android:clickable="true"
             android:focusable="true"
-            android:text="@string/olvido"
+            android:text="@string/olvidastes_passwordd"
             android:textColor="@color/carmine_pink"
             android:textSize="16sp"
             android:textStyle="bold"/>
 
         <Button
-            android:id="@+id/btnEmpezar"
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
             android:layout_marginTop="30dp"
             android:background="@drawable/sh_bg_btn_gunmetal"
-            android:text="@string/ingresar"
+            android:text="@string/login"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -139,25 +137,26 @@
             android:orientation="horizontal">
 
             <View
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/carmine_pink" />
+                android:background="@color/carmine_pink"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Or login with"
+                android:text="@string/ingresar_con"
                 android:textColor="@color/police_blue"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <View
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="1dp"
-                android:layout_gravity="end"
                 android:layout_marginTop="10dp"
-                android:background="@color/carmine_pink" />
+                android:layout_gravity="end"
+                android:background="@color/carmine_pink"/>
+
         </FrameLayout>
 
         <FrameLayout
@@ -166,51 +165,59 @@
             android:layout_marginTop="30dp">
 
             <ImageView
+                android:id="@+id/ivFacebook"
                 android:layout_width="108dp"
                 android:layout_height="84dp"
                 android:background="@drawable/sh_bg_btn_flesh"
-                android:contentDescription="contentDescription"
-                android:padding="20dp"
-                android:src="@drawable/ic_facebook" />
+                android:contentDescription="@string/content_description"
+                android:padding="16dp"
+                android:src="@drawable/ic_facebook"/>
+
             <ImageView
+                android:id="@+id/ivGoogle"
                 android:layout_width="108dp"
                 android:layout_height="84dp"
                 android:layout_gravity="center"
                 android:background="@drawable/sh_bg_btn_flesh"
-                android:contentDescription="contentDescription"
-                android:padding="10dp"
-                android:src="@drawable/ic_google_plus" />
+                android:contentDescription="@string/content_description"
+                android:padding="16dp"
+                android:src="@drawable/ic_google"/>
 
             <ImageView
+                android:id="@+id/ivApple"
                 android:layout_width="108dp"
                 android:layout_height="84dp"
                 android:layout_gravity="end"
                 android:background="@drawable/sh_bg_btn_flesh"
-                android:contentDescription="contentDescription"
+                android:contentDescription="@string/content_description"
                 android:padding="16dp"
-                android:src="@drawable/ic_apple" />
+                android:src="@drawable/ic_apple"/>
+
         </FrameLayout>
 
     </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginStart="90dp"
+        android:layout_marginStart="80dp"
         android:layout_marginBottom="30dp"
-        android:text="You have an account?"
+        android:text="¿ Si estas registrado ?"
         android:textColor="@color/police_blue"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
+
     <TextView
         android:id="@+id/tvRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="30dp"
         android:clickable="true"
         android:focusable="true"
-        android:layout_marginStart="70dp"
-        android:layout_marginBottom="30dp"
-        android:text="Log in"
+        android:text="Registrate ahora"
         android:textColor="@color/carmine_pink"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
+
 </FrameLayout>

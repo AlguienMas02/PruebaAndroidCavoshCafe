@@ -30,9 +30,8 @@ public class Login extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentLoginBinding.inflate(inflater, container, false);
+        binding = FragmentLoginBinding.inflate(inflater,container,false);
         return view = binding.getRoot();
-
     }
 
     @Override
@@ -41,14 +40,14 @@ public class Login extends Fragment {
         context = getContext();
         navController = Navigation.findNavController( view );
 
-        binding.tvOlvidastes.setOnClickListener(v -> navController.navigate(R.id.navigation_olvidastes));
-        binding.tvRegistrar.setOnClickListener(v -> navController.navigate(R.id.navigation_registrar));
-        binding.tvOlvidastes.setOnClickListener(v -> navController.navigate(R.id.navigation_olvidastes));
-        binding.btnLogin.setOnClickListener(v -> btnLogin_Click() );
+        binding.tvOlvidastes.setOnClickListener( v -> navController.navigate( R.id.navigation_olvidastes ) );
+        binding.tvRegistrar.setOnClickListener( v -> navController.navigate( R.id.navigation_registrar ) );
+        binding.btnRegistar.setOnClickListener( v -> navController.navigate( R.id.navigation_registrar ) );
+        binding.btnLogin.setOnClickListener( v -> btnLogin_Click() );
+    }
 
+    private void btnLogin_Click() {
 
     }
-    void btnLogin_Click() {
 
-    }
 }

@@ -7,34 +7,28 @@
     android:layout_height="match_parent"
     tools:context=".ui.Validar">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="@drawable/sh_bg_header_police_blue" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|start"
-            android:layout_marginStart="20dp"
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:paddingHorizontal="16dp"
+            android:gravity="center|start"
+            android:background="@drawable/sh_bg_header_police_blue"
             android:text="Validar código"
             android:textColor="@color/flesh"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-    </FrameLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_gravity="center"
-        android:orientation="vertical" >
+
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilCodigo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="-96dp"
+            android:layout_marginHorizontal="50dp"
+            android:layout_gravity="center"
             app:endIconMode="clear_text"
             app:hintEnabled="false" >
 
@@ -52,11 +46,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnValidar"
+            android:id="@+id/btnValidarCodigo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:layout_marginTop="50dp"
+            android:layout_marginHorizontal="50dp"
+            android:layout_gravity="center"
             android:background="@drawable/sh_bg_btn_gunmetal"
             android:text="Validar código"
             android:textAllCaps="false"
@@ -64,6 +58,5 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-    </LinearLayout>
 
 </FrameLayout>

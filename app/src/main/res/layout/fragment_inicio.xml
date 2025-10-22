@@ -146,7 +146,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/rvNovedades"
-        app:layout_constraint_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMasNovedades"

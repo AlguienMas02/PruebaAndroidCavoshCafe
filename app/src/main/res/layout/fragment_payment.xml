@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/sh_bg_header_police_blue"
+        android:gravity="center"
+        android:paddingHorizontal="16dp"
+        android:text="Payment Method"
+        android:textColor="@color/flesh"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTarjeta"
+        android:layout_width="110dp"
+        android:layout_height="160dp"
+        android:paddingBottom="20dp"
+        android:gravity="center|bottom"
+        android:layout_margin="26dp"
+        android:background="@drawable/sh_bg_btn_bright_gray"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Card"
+        android:textSize="20sp"
+        android:textColor="@color/police_blue"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivColdDrink"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/sh_bg_btn_carmine_pink"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="@string/content_description"
+        android:padding="8dp"
+        android:src="@drawable/ic_tarjeta"
+        app:layout_constraintTop_toTopOf="@id/tvTarjeta"
+        app:layout_constraintStart_toStartOf="@id/tvTarjeta"
+        app:layout_constraintEnd_toEndOf="@id/tvTarjeta"
+        app:tint="@color/police_blue" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

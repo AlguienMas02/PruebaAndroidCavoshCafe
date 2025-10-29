@@ -40,7 +40,7 @@ public class Registrar extends Fragment {
         context = getContext();
         navController = Navigation.findNavController( view );
 
-        binding.btnGuardar.setOnClickListener( v -> btnGuardar_Click() );
+        binding.btnRegistrar.setOnClickListener( v -> btnGuardar_Click() );
     }
 
     private void btnGuardar_Click() {

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigation_splash">
+    app:startDestination="@id/navigation_menu">
     <fragment
         android:id="@+id/navigation_splash"
         android:name="pe.edu.senati.apkcavoshcafe.ui.Splash"
@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_navigation_login_to_navigation_inicio"
             app:destination="@id/navigation_inicio" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_olvidastes"
+            app:destination="@id/navigation_olvidastes" />
     </fragment>
     <fragment
         android:id="@+id/navigation_registrar"
@@ -38,7 +41,11 @@
         android:id="@+id/navigation_validar"
         android:name="pe.edu.senati.apkcavoshcafe.ui.Validar"
         android:label="fragment_verificar"
-        tools:layout="@layout/fragment_validar" />
+        tools:layout="@layout/fragment_validar" >
+        <action
+            android:id="@+id/action_navigation_validar_to_navigation_password"
+            app:destination="@id/navigation_password" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_inicio"
         android:name="pe.edu.senati.apkcavoshcafe.ui.Inicio"
@@ -99,7 +106,11 @@
         android:id="@+id/navigation_olvidastes"
         android:name="pe.edu.senati.apkcavoshcafe.ui.olvidastes"
         android:label="fragment_olvidaste"
-        tools:layout="@layout/fragment_olvidaste" />
+        tools:layout="@layout/fragment_olvidaste" >
+        <action
+            android:id="@+id/action_navigation_olvidastes_to_navigation_validar"
+            app:destination="@id/navigation_validar" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_password"
         android:name="pe.edu.senati.apkcavoshcafe.ui.Password"

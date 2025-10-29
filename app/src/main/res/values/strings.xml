@@ -21,5 +21,7 @@
     <string name="confirmar_passwordd">Confirmar contraseña</string>
     <string name="verificar">Verificar</string>
     <string name="guardar">Guardar</string>
+    <string name="aplicar">Aplicar</string>
+    <string name="siguiente">Siguiente</string>
 
 </resources>

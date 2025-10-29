@@ -47,8 +47,8 @@ public class Password extends Fragment {
     private void btnActualizar_Click() {
         String sCorreo = getArguments().getString("correo");
 
-        String sPasswordd = binding.tilPassword.getEditText().getText().toString().trim();
-        String sPassworddConfirmar = binding.tilPasswordConfirmar.getEditText().getText().toString().trim();
+        String sPasswordd = binding.tilPasswordd.getEditText().getText().toString().trim();
+        String sPassworddConfirmar = binding.tilPassworddConfirmar.getEditText().getText().toString().trim();
 
         // api -> actualizar passowrdd para el correo
         // mensaje "Actualizacion exitosa"
